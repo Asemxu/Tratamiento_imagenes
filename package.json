@@ -1,0 +1,28 @@
+{
+  "name": "Tratamiento_imagenes",
+  "version": "1.0.0",
+  "description": "Completad las funciones siguiendo las instrucciones del comentario en el pichero `actividad.js`. No deberíais tener que  modificar el código en `ImageHandler.js` en ningun caso.",
+  "main": "ImageHandler.js",
+  "dependencies": {
+    "deasync": "^0.1.29",
+    "fs": "^0.0.1-security",
+    "get-pixels": "^3.3.3",
+    "ndarray": "^1.0.19",
+    "save-pixels": "^2.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asemxu/Tratamiento_imagenes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asemxu/Tratamiento_imagenes/issues"
+  },
+  "homepage": "https://github.com/Asemxu/Tratamiento_imagenes#readme"
+}
