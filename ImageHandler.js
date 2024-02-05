@@ -1,7 +1,6 @@
 const getPixalesNpm = require('get-pixels')
 const savePixelesNpm = require('save-pixels')
 const fs = require('fs')
-const ndarray = require('ndarray')
 class ImageHandler {
 
     /**
@@ -40,7 +39,6 @@ class ImageHandler {
         }
     }
 
-
     /**
      * getShape
      * @returns Array de dimensiones de la imagen
@@ -65,7 +63,7 @@ class ImageHandler {
             console.error('Las imágenes deben tener las mismas dimensiones.');
             return;
         }
-        
+
 
         for (let i = 0; i < this.pixels.data.length; i++) {
             this.pixels.data[i] = Math.round(this.pixels.data[i] * (1 - this.mergeFactor) + anotherImage.pixels.data[i] * this.mergeFactor);
@@ -173,13 +171,12 @@ class ImageHandler {
      */
     savePixels(typeConverter, anotherImage = null) {
         this.converterImage(typeConverter, anotherImage)
-       
     }
 
-     /**
-     * Funtion to write image to path result
-     */
-    writeImage(outputPath){
+    /**
+    * Funtion to write image to path result
+    */
+    writeImage(outputPath) {
         const newImageStream = fs.createWriteStream(outputPath);
         savePixelesNpm(this.pixels, 'jpg').pipe(newImageStream);
 
@@ -187,8 +184,6 @@ class ImageHandler {
             console.log('Imagen guardada correctamente en', outputPath);
         });
     }
-
-
 }
 
 module.exports = ImageHandler
